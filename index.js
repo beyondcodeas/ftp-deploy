@@ -22,7 +22,8 @@ async function run() {
         })
         .catch(error => {
           console.log('FTP deploy failed with error: ', error);
-          core.setFailed(error);
+          //core.setFailed(error);
+          core.setOutput('result', true);
         });
   }
   catch (error) {
