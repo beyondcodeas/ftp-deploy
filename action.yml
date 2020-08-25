@@ -14,6 +14,9 @@ inputs:
   localRoot:
     description: 'Local root for source files that will be transferred to the destination, eg: "dist"'
     required: true
+  remoteRoot:
+    description: 'Destination folder on remote, eg: "/"'
+    required: true
 outputs:
   result:
     description: 'Returns "true" when everything went well'

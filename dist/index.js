@@ -3103,8 +3103,9 @@ async function run() {
     const user = core.getInput('user');
     const password = core.getInput('password');
     const localRoot = core.getInput('localRoot');
+    const remoteRoot = core.getInput('remoteRoot');
 
-    const config = getConfig(server, user, password, localRoot);
+    const config = getConfig(server, user, password, localRoot, remoteRoot);
 
     const ftp = new ftpDeploy();
 
@@ -3128,14 +3129,14 @@ async function run() {
 
 run();
 
-function getConfig(server, user, password, localRoot) {
+function getConfig(server, user, password, localRoot, remoteRoot) {
   return {
     user: user,
     password: password,
     host: server,
     port: 21,
     localRoot: localRoot,
-    remoteRoot: "/",
+    remoteRoot: remoteRoot,
     include: ["*"],
     exclude: [],
     deleteRemote: true,
