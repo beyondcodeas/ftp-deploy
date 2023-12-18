@@ -26,7 +26,7 @@
   "homepage": "https://github.com/januszmarcinik/ftp-deploy",
   "dependencies": {
     "@actions/core": "^1.2.3",
-    "ftp-deploy": "^2.3.7"
+    "ftp-deploy": "^2.4.5"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",
